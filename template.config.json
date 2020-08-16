@@ -1,0 +1,113 @@
+{
+  "configs": [
+    {
+      "name": "youtube",
+      "method": "GET",
+      "url": "https://www.youtube.com/channel/${channel_id}/live",
+      "header": {},
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "amazon",
+      "method": "GET",
+      "url": "https://amazon.co.jp/registry/wishlist/${wishlist_id}/",
+      "header": {},
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "bilibili",
+      "method": "GET",
+      "url": "https://api.live.bilibili.com/xlive/web-room/v1/index/getInfoByRoom?room_id=${live_id}",
+      "header": {
+        "Accept": [
+          "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"
+        ]
+      },
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "twitcasting",
+      "method": "GET",
+      "url": "https://twitcasting.tv/${name}",
+      "header": {},
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "lol",
+      "method": "GET",
+      "url": "https://jp.op.gg/summoner/ajax/spectateStatus/summonerName=${name}",
+      "header": {},
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "apex",
+      "method": "GET",
+      "url": "https://apex.tracker.gg/profile/pc/${name}",
+      "header": {},
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "twitter.timeline",
+      "method": "GET",
+      "url": "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${name}&include_rts=true&exclude_replies=false",
+      "header": {
+        "Authorization": [
+          "Bearer ${your_bearer_token}"
+        ]
+      },
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "twitter.like",
+      "method": "GET",
+      "url": "https://api.twitter.com/1.1/favorites/list.json?screen_name=${name}&count=100",
+      "header": {
+        "Authorization": [
+          "Bearer ${your_bearer_token}"
+        ]
+      },
+      "content": "",
+      "args": {
+        "name": "${name}"
+      }
+    },
+    {
+      "name": "livechat",
+      "method": "",
+      "url": "https://",
+      "header": {},
+      "content": "",
+      "args": {
+        "keyword": [
+          "${keyword1}",
+          "${keyword2}"
+        ],
+        "sender": [
+          "${sender1}",
+          "${sender2}"
+        ]
+      }
+    }
+  ]
+}
